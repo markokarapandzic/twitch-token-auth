@@ -1,0 +1,52 @@
+{
+  "name": "twitch-token-auth",
+  "version": "0.1.0",
+  "description": "NPM package for Twitch authentication",
+  "license": "MIT",
+  "repository": "https://github.com/markokarapandzic/twitch-token-auth",
+  "author": {
+    "name": "Marko Karapandzic",
+    "email": "karapandzicmarko1@gmail.com",
+    "url": "https://markokarapandzic.github.io/portfolio-website/"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "yarn webpack:build",
+    "webpack:build": "webpack --mode production --config ./config/webpack.config.js",
+    "webpack:develop": "webpack --mode development --watch --watch-poll --config ./config/webpack.config.js",
+    "test:watch": "jest --config ./config/jest.config.js --watch",
+    "test": "jest --config ./config/jest.config.js --coverage",
+    "lint": "eslint ./src"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.15.3",
+    "rimraf": "^3.0.0",
+    "semantic-release": "^17.0.2",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "keywords": []
+}
